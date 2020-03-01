@@ -10,3 +10,4 @@ Code in pytorch for reproducing experiments in "CPM-Nets: Cross Partial Multi-Vi
 
 # Reference
  NeurIPS'19 Spotlight paper CPM-Nets: Cross Partial Multi-View Networks
+ https://github.com/hanmenghan/CPM_Nets
