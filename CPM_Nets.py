@@ -8,7 +8,7 @@ from torch.autograd import Variable
 import torch.nn as nn
 
 
-class CPMNet_Works(nn.Module):
+class CPMNet_Works(nn.Module): # Main parts of the test code
     """build model
     """
     def __init__(self, device, view_num, trainLen, testLen, layer_size, lsd_dim=128, learning_rate=[0.001, 0.001], lamb=1):
