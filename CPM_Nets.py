@@ -44,7 +44,7 @@ class CPMNet_Works(nn.Module): # Main parts of the test code
             h = Variable(xavier_init(self.testLen, self.lsd_dim), requires_grad = True)
         return h
 
-    def reconstruction_loss(self,h,x,sn):#输入为train或test的h，目标x，转化为字典的sn
+    def reconstruction_loss(self,h,x,sn):
         loss = 0
         x_pred = self.calculate(h.cuda())
         for num in range(self.view_num):
@@ -53,7 +53,7 @@ class CPMNet_Works(nn.Module): # Main parts of the test code
             ).sum()
         return loss
 
-    def classification_loss(self,label_onehot, gt, h_temp):#标签、经过训练过的h
+    def classification_loss(self,label_onehot, gt, h_temp):
         h_temp = h_temp.float()
         h_temp = h_temp.cuda()
         F_h_h = torch.mm(h_temp, (h_temp.T))
